@@ -3,8 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from sqlalchemy import text
 
-from . import models, schemas, crud
-from .database import SessionLocal, engine, Base
+from import models, schemas, crud
+from database import SessionLocal, engine, Base
 
 def get_db():
    db = SessionLocal()
