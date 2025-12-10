@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from sqlalchemy import text
 
-from import models, schemas, crud
+import models, schemas, crud
 from database import SessionLocal, engine, Base
 
 def get_db():
@@ -17,7 +17,7 @@ app = FastAPI() # Here we are building a fastAPI object.
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],                 
+    allow_origins=["*"],                 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
